@@ -1,0 +1,45 @@
+---
+:user_name: timon
+:game_status: win
+:count_of_try: 5
+:is_hint_used: false
+---
+:user_name: pumba
+:game_status: win
+:count_of_try: 4
+:is_hint_used: true
+---
+:user_name: bill
+:game_status: win
+:count_of_try: 4
+:is_hint_used: false
+---
+:user_name: joe
+:game_status: lose
+:count_of_try: 11
+:is_hint_used: false
+---
+:user_name: lui
+:game_status: lose
+:count_of_try: 14
+:is_hint_used: false
+---
+:user_name: nico
+:game_status: win
+:count_of_try: 4
+:is_hint_used: true
+---
+:user_name: joe
+:game_status: win
+:count_of_try: 5
+:is_hint_used: false
+---
+:user_name: monika
+:game_status: win
+:count_of_try: 7
+:is_hint_used: true
+---
+:user_name: derek
+:game_status: lose
+:count_of_try: 14
+:is_hint_used: false

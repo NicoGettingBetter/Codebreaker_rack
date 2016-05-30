@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codebreaker</title>
+    <h1>Codebreaker</h1>
+    <link rel="stylesheet" href="/stylesheets/application.css" type="text/css">
+  </head>
+  <body>
+    <table class="game">
+      <% unless codebreaker %>
+      <tr>
+        <form action="/start" method="post">
+          <td><button class="btn" type="submit">Start game</button></td>
+        </form>
+      </tr>
+      <% else %>
+      <tr><td>Input 4 digits</td></tr>
+      <tr>
+        <form method="post" action="/play">
+        <td><input name="guess" autofocus=true type="text" pattern="^[1-6]{4}$" required/></td>
+        <td><button type="submit">Check!<span><%= count_of_try %></span></button></td>
+        </form>
+      </tr>
+      <form method="post" action="/hint">
+      <tr><td>        
+        <% if guess %>    
+        <table class="result">   
+          <tr>
+            <td><%= guess %></td>
+            <td><%= result %></td>
+          </tr>
+        </table>
+        <% end %>  
+        </td><td>
+          <button type="submit">Show hint
+            <% if hint %>
+            <span><%= hint %></span>
+            <% end %> 
+          </button>
+        </td>
+      </tr>
+      </form>
+      <form method="post" action="/start">
+        <tr><td></td><td><button type="submit">New game</button></td></tr>
+      </form>
+      <% end %>
+    </table>
+    <table class="score">
+    	<tr><h2>Table of scores</h2></tr>
+      <% score_table.each do |item| %>
+        <tr><td><%= item[:user_name] %></td>
+          <td><ul><li><%= "game status: #{item[:game_status]}" %></li>
+          <li><%= "count of try: #{item[:count_of_try]}" %></li>
+          <li><%= "is hint used: #{item[:is_hint_used]}" %></li></ul></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
