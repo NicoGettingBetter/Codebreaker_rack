@@ -2,7 +2,7 @@ body {
   font-family: Verdana;
   font-size: 14px;
   color: blue;
-  background-image:url(background.jpg);
+  background: linear-gradient(#ff5, #5f5);
 }
 .score {
   border: 3px solid #09e;
@@ -19,7 +19,6 @@ body {
 }
 h2, h1 {
   text-align: center;
-  color: white;
 }
 input {
   background: #0f7;
