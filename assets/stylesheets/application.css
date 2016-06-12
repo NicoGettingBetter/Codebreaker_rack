@@ -1,0 +1,55 @@
+body {
+  font-family: Verdana;
+  font-size: 14px;
+  color: blue;
+  background: linear-gradient(#ff5, #5f5);
+}
+.score {
+  border: 3px solid #09e;
+  margin: 30px auto 10px;
+  background-color: #ffa;
+  padding: 10px 100px;
+}
+.game {
+  margin: 50px auto 10px;
+  background-color: #0f7;
+  padding: 20px 100px;
+  border: 10px solid #09e;
+  border-radius: 0px 30px 0px 30px;
+}
+h2, h1 {
+  text-align: center;
+}
+input {
+  background: #0f7;
+  border: 3px solid #09e;
+  border-radius: 5px 0 5px 0;
+  width: 242px;
+  height: 28px;
+}
+button {
+  font-size: 15px;
+  background: #FFA none repeat scroll 0% 0%;
+  border: 3px solid #09E;
+  border-radius: 5px 0 5px 0;
+  color: #00F;
+  padding: 5px;
+  width: 250px;
+}
+span {
+  color: white;
+  background: blue;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 3px;
+  font-weight: bold;
+}
+.result {
+  background: #ffa;
+  border: 3px solid #09e;
+  border-radius: 5px 0 5px 0;
+  width: 250px;
+  padding: 10px 5px 0 5px;
+  text-align: center;
+  padding: 3px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result</title>
+    <h1><%="#{result}"%></h1>
+    <link rel="stylesheet" href="/stylesheets/application.css" type="text/css">
+  </head>
+  <body>
+    <table class="game">
+      <tr><td>Input your name</td></tr>
+      <form method="post" action="/save">
+      <tr>
+        <td><input name="user_name" autofocus=true type="text" required/></td>
+        <td><button type="submit">Save!</button></td></tr>
+      </form>
+    </table>
+    <table class="score">
+      <tr><h2>Table of scores</h2></tr>
+      <% score_table.each do |item| %>
+        <tr><td><%= item[:user_name] %></td>
+        <td><ul><li><%= "game status: #{item[:game_status]}" %></li>
+        <li><%= "count of try: #{item[:count_of_try]}" %></li>
+        <li><%= "is hint used: #{item[:is_hint_used]}" %></li></ul></td></tr>
+      <% end %>
+    </table>
+  </body>
+</html>
